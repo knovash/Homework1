@@ -9,9 +9,47 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--        версии депенденси принято выносить в тег пропетис-->
+        <testng-version>7.1.0</testng-version>
+        <selenium-java-version>4.9.1</selenium-java-version>
+        <maven-compiler-plugin-version>3.11.0</maven-compiler-plugin-version>
+        <java-version>17</java-version>
+        <!--        эти три строки удаляем т.к. версию явы указываем в компайлер плагине в <build>-->
+        <!--        <maven.compiler.source>17</maven.compiler.source>-->
+        <!--        <maven.compiler.target>17</maven.compiler.target>-->
+        <!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium-java-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng-version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- добавляем плагины в build. плагины могут вносить изменения в мавен лайф сайкл -->
+    <build>
+        <plugins>
+            <!-- для обозначения версионности явы maven-compiler-plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin-version}</version>
+                <configuration>
+                    <!-- put your configurations here -->
+                    <!-- тут добавляем версию явы -->
+                    <source>${java-version}</source>
+                    <target>${java-version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

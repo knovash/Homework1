@@ -1,4 +1,4 @@
-package org.itacademy;
+package org.itacademy.homework1;
 
 public class Main {
     /** Homework 1
