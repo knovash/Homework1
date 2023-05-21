@@ -41,7 +41,7 @@ public class NewTest {
 
 // ожидание просто посмотреть на открытую страницу кредиты
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
