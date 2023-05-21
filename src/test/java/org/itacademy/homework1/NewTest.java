@@ -13,21 +13,12 @@ public class NewTest {
     @BeforeTest
     public static void setup() {
         System.out.println("BEFORE TEST");
+        // прочитать из файла конфига путь к хромдрайверу и тестируемый урл
         Config.getProperties();
-
-//        //создание экземпляра драйвера
-//        WebDriver driver = new ChromeDriver();
-//        //окно разворачивается на полный экран
-//        driver.manage().window().maximize();
-//        //задержка на выполнение теста = 10 сек.
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        //получение ссылки на страницу входа из файла настроек
-//        driver.get(Config.getTestPage());
-
     }
 
-    @Test
-    public void verifyNameTest() {
+    @Test(description = "this test pushes the credit button")
+    public void verifyButtonCreditTest() {
 
         // test TestNG soft assert
         SoftAssert sa = new SoftAssert();
@@ -48,11 +39,13 @@ public class NewTest {
 // вызываем у страницы метод нажать на кнопку
         firstPage.clickCreditButton();
 
+// ожидание просто посмотреть на открытую страницу кредиты
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+// закрыть браузер
         driver.quit();
     }
 }

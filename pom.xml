@@ -10,7 +10,7 @@
 
     <properties>
         <!--        версии депенденси принято выносить в тег пропетис-->
-        <testng-version>7.1.0</testng-version>
+        <testng-version>7.7.0</testng-version>
         <selenium-java-version>4.9.1</selenium-java-version>
         <maven-compiler-plugin-version>3.11.0</maven-compiler-plugin-version>
         <java-version>17</java-version>
@@ -34,6 +34,7 @@
             <scope>test</scope>
         </dependency>
 
+<!--        SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>

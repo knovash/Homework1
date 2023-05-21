@@ -22,7 +22,9 @@ public class FirstPage {
 
     // метод нажатия кнопки
     public void clickCreditButton() {
+        // вывести текст кнопки
         System.out.println(CreditButton.getText());
+        // нажать кнопку
         CreditButton.click();
     }
 }
