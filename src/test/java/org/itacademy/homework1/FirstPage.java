@@ -27,4 +27,11 @@ public class FirstPage {
         // нажать кнопку
         CreditButton.click();
     }
+
+    public void clickRedButton() {
+        // вывести текст кнопки
+        System.out.println(CreditButton.getText());
+        // нажать кнопку
+        CreditButton.click();
+    }
 }
