@@ -34,4 +34,11 @@ public class FirstPage {
         // нажать кнопку
         CreditButton.click();
     }
+
+    public void clickBlueButton() {
+        // вывести текст кнопки
+        System.out.println(CreditButton.getText());
+        // нажать кнопку
+        CreditButton.click();
+    }
 }
