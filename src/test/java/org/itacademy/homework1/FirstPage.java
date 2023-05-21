@@ -41,4 +41,12 @@ public class FirstPage {
         // нажать кнопку
         CreditButton.click();
     }
+
+    public void clickRedButton() {
+        CreditButton.click();
+    }
+
+    public void clickBlueButton() {
+        CreditButton.click();
+    }
 }
